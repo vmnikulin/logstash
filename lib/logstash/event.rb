@@ -56,7 +56,7 @@ class LogStash::Event
     @data = data
     @accessors = LogStash::Util::Accessors.new(data)
 
-    data[VERSION] = VERSION_ONE if !@data.include?(VERSION)
+    #data[VERSION] = VERSION_ONE if !@data.include?(VERSION)
     if data.include?(TIMESTAMP)
       t = data[TIMESTAMP]
       if t.is_a?(String)
